@@ -39,7 +39,7 @@ jobs:
           ignored-paths: "wiki/LICENSE,wiki/.vuepress"
           translation-paths: "wiki/fr"
           file-suffix: ".md"
-          bot-label: "BOT"
+          bot-label: "WUT"
           token: ${{ secrets.GITHUB_TOKEN }}
           log-level: "DEBUG"
     env:
