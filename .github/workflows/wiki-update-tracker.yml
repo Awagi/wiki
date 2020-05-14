@@ -42,5 +42,6 @@ jobs:
           bot-label: "WUT"
           token: ${{ secrets.GITHUB_TOKEN }}
           log-level: "DEBUG"
+          auto-create: "1"
     env:
         ENABLE: ${{ secrets.ENABLE_WUT }}
