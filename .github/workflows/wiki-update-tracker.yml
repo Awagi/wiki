@@ -37,7 +37,7 @@ jobs:
           repo-path: $GITHUB_WORKSPACE
           original-path: "wiki"
           ignored-paths: "wiki/LICENSE,wiki/.vuepress"
-          translation-paths: "wiki/fr"
+          translation-paths: "wiki/fr,wiki/de"
           file-suffix: ".md"
           bot-label: "WUT"
           token: ${{ secrets.GITHUB_TOKEN }}
