@@ -37,11 +37,13 @@ jobs:
           repo-path: $GITHUB_WORKSPACE
           original-path: "wiki"
           ignored-paths: "wiki/LICENSE,wiki/.vuepress"
-          translation-paths: "wiki/fr,wiki/de"
+          translations: "fr:wiki/fr,de:wiki/de"
           file-suffix: ".md"
           bot-label: "WUT"
           token: ${{ secrets.GITHUB_TOKEN }}
           log-level: "DEBUG"
           auto-create: "1"
+          update-issues: "0"
+          update-projects: "1"
     env:
         ENABLE: ${{ secrets.ENABLE_WUT }}
