@@ -1,2 +1,0 @@
-Random text to translate
-
