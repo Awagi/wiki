@@ -43,7 +43,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           log-level: "DEBUG"
           auto-create: "1"
-          update-issues: "0"
+          update-issues: "1"
           update-projects: "1"
     env:
         ENABLE: ${{ secrets.ENABLE_WUT }}
