@@ -15,13 +15,6 @@ jobs:
         if: env.ENABLE != '1ENABLED'
         run: echo ENABLE_WUT Secret not set to 1ENABLED, skipping page tracking... 
 
-      - name: Checkout git repository
-        if: env.ENABLE == '1ENABLED'
-        uses: actions/checkout@v2
-        with:
-          ref: test-wut
-          fetch-depth: 0
-
       - name: Get custom App JWT
         if: env.ENABLE == '1ENABLED'
         id: get_token
@@ -29,6 +22,14 @@ jobs:
         with:
           APP_PEM: ${{ secrets.APP_PEM }}
           APP_ID: ${{ secrets.APP_ID }}
+
+      - name: Checkout git repository
+        if: env.ENABLE == '1ENABLED'
+        uses: actions/checkout@v2
+        with:
+          ref: test-wut
+          fetch-depth: 0
+          token: ${{ steps.get_token.outputs.app_token }}
 
       - name: Check original pages status and update issues
         if: env.ENABLE == '1ENABLED'
