@@ -35,7 +35,7 @@ jobs:
         if: env.ENABLE == '1ENABLED'
         uses: Awagi/wiki-update-tracker@dev
         with:
-          log-level: DEBUG
+          log-level: "DEBUG"
           repo-path: "."
           original: "wiki"
           translations: |
