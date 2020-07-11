@@ -52,7 +52,7 @@ jobs:
           gen-copy: |
             *.png
           token: ${{ steps.get_token.outputs.app_token }}
-          instruct-projects: 
+          instruct-projects: |
             *.md
           project-title-template: "Wiki {t.translation.language} Update Tracker"
           project-description-template: "{t.translation.language} translation effort."
