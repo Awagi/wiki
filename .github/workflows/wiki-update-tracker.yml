@@ -35,7 +35,7 @@ jobs:
         if: env.ENABLE == '1ENABLED'
         uses: Awagi/wiki-update-tracker@dev
         with:
-          log-level: "DEBUG"
+          log-level: DEBUG
           repo-path: "."
           original: "wiki"
           translations: |
@@ -47,7 +47,7 @@ jobs:
           ignores: |
             wiki/LICENSE
           gen-stubs: |
-            .md
+            *.md
           stub-template: .github/workflows/wut-templates/translation-stub-template.md
           gen-copy: |
             *.png
