@@ -48,7 +48,7 @@ jobs:
             wiki/LICENSE
           gen-stubs: |
             .md
-          stub-template: "${{ GITHUB_WORKSPACE }}/.github/wut-templates/translation-stub-template.md"
+          stub-template: $GITHUB_WORKSPACE/.github/wut-templates/translation-stub-template.md
           gen-copy: |
             *.png
           token: ${{ steps.get_token.outputs.app_token }}
@@ -56,11 +56,11 @@ jobs:
             *.md
           project-title-template: "Wiki {t.translation.language} Update Tracker"
           project-description-template: "{t.translation.language} translation effort."
-          project-card-create-template: "${{ GITHUB_WORKSPACE }}/.github/wut-templates/project-create-template.md"
-          project-card-initialize-template: "${{ GITHUB_WORKSPACE }}/.github/wut-templates/project-initialize-template.md"
-          project-card-update-template: "${{ GITHUB_WORKSPACE }}/.github/wut-templates/project-update-template.md"
-          project-card-uptodate-template: "${{ GITHUB_WORKSPACE }}/.github/wut-templates/project-uptodate-template.md"
-          project-card-orphan-template: "${{ GITHUB_WORKSPACE }}/.github/wut-templates/project-orphan-template.md"
+          project-card-create-template: $GITHUB_WORKSPACE/.github/wut-templates/project-create-template.md
+          project-card-initialize-template: $GITHUB_WORKSPACE/.github/wut-templates/project-initialize-template.md
+          project-card-update-template: $GITHUB_WORKSPACE/.github/wut-templates/project-update-template.md
+          project-card-uptodate-template: $GITHUB_WORKSPACE/.github/wut-templates/project-uptodate-template.md
+          project-card-orphan-template: $GITHUB_WORKSPACE/.github/wut-templates/project-orphan-template.md
 
     env:
         ENABLE: ${{ secrets.ENABLE_WUT }}
